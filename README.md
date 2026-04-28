@@ -1,36 +1,57 @@
-# User Management System
-A professional web application designed for efficient administration of user data, providing a full suite of CRUD (Create, Read, Update, Delete) capabilities within a modular JavaScript environment.
+# User Management System (TypeScript & Vite)
+A professional web application designed for efficient administration of user data, providing a full suite of CRUD (Create, Read, Update, Delete) capabilities within a modular TypeScript environment.
 
 ---
 
 ## Overview
-This system serves as a centralized directory for managing user profiles (names and email addresses). It is engineered to provide a seamless administrative experience, allowing for real-time searching, data entry, and secure modification of records. The project emphasizes clean code separation, ensuring that data logic and user interface components remain distinct.
+This system serves as a centralized directory for managing user profiles (names and email addresses). It is built with TypeScript for enhanced type safety and maintainability, and utilizes Vite for a modern, fast development experience. The project emphasizes clean code separation using the MVC pattern.
 
 ## Core Features
+* **TypeScript Support**: Full type safety across models, views, and controllers.
+* **Vite Integration**: Extremely fast development server and optimized production builds.
 * **Dynamic Search and Filtering**: Instant filtering of the user database based on name or email input.
 * **Comprehensive Record Management**: Full support for creating new entries, updating existing data, and viewing the current directory.
 * **Secure Deletion Workflow**: Includes a dedicated confirmation step to prevent accidental removal of user data.
 * **State-Driven Navigation**: A unified navigation menu that manages the application state across different administrative views.
 
-## Installation and Technical Setup
-The application is a client-side JavaScript solution that runs directly in any modern web browser without the need for additional backend dependencies.
+## Technical Setup
 
 ### Prerequisites
-* A modern web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari).
+* [Node.js](https://nodejs.org/) (latest LTS recommended)
+* [npm](https://www.npmjs.com/)
 
-### Deployment Steps
-1.  **Extract Assets**: Download and extract the project files, ensuring the statics/js directory structure remains intact.
-2.  **Verify Components**: Ensure all modular scripts (search, create, modify, confirm) are located in their respective subdirectories.
-3.  **Launch Application**: Open the index.html file in your browser to initialize the system and load the default dataset.
+### Installation
+1.  Clone the repository.
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+
+### Available Commands
+* **Development Server**:
+  ```bash
+  npm run dev
+  ```
+* **Build for Production**:
+  ```bash
+  npm run build
+  ```
+* **Preview Production Build**:
+  ```bash
+  npm run preview
+  ```
+* **Compile TypeScript**:
+  ```bash
+  npm run compile
+  ```
 
 ## Architecture
-The project follows a strict Model-View-Controller (MVC) pattern to manage complexity:
-* **Model (modal.js)**: Holds the application state, including the global user array and input field buffers.
-* **View**: Separated into functional modules (searchView, createView, modifyView, confirmView) that render HTML based on the current state.
-* **Controller**: Handles user interactions and updates the Model, ensuring data integrity before re-rendering the View.
-
-## Contributors
-Developed as a technical project focusing on state management and modular application design in JavaScript.
+The project follows a strict Model-View-Controller (MVC) pattern:
+* **Source Files**: All source logic is located in `statics/ts/`.
+* **Compiled Files**: TypeScript is compiled into `statics/js/` (ignored by git).
+* **Model (`statics/ts/modal.ts`)**: Defines types and holds the application state.
+* **Views**: Functional modules (`statics/ts/*/view.ts`) that render HTML based on the state.
+* **Controllers**: Handle user interactions (`statics/ts/*/controller.ts`) and update the Model.
 
 ---
-*Efficient data administration through modular design.*
+*Efficient data administration through modern TypeScript and Vite.*

@@ -5,48 +5,9 @@
         <meta http-equiv="X-OK-Compatible" content="">
         <meta name="viewport" content="width=device-width, Initial-scale=1.0">
         <title>Name and epost register</title>
-        <script src="statics/js/modal.js"></script>
-        <script src="statics/js/view.js"></script>
-        <script src="statics/js/modify/view.js"></script>
-        <script src="statics/js/create/view.js"></script>
-        <script src="statics/js/search/view.js"></script>
-        <script src="statics/js/confirm/view.js"></script>
-        <script src="statics/js/modify/view.js"></script>
-        <script src="statics/js/modify/controller.js"></script>
-        <script src="statics/js/create/controller.js"></script>
-        <script src="statics/js/search/controller.js"></script>
-        <script src="statics/js/confirm/controller.js"></script>
+        <script type="module" src="/statics/ts/main.ts"></script>
     </head>
     <body>
-        <div id="app">
-
-        </div>
-    <script>
-        updateview();
-        function updateview()
-        {
-            //  Initialize page
-            const page = modal.app.currentpage;
-
-            //  Ensure that variable is equal to
-            if (page == "search")
-            {
-                searchView();
-            }
-            else if (page == "create")
-            {
-                createView();
-            }
-            else if (page == "confirm")
-            {
-                confirmView();
-            }
-            else if (page == 'modify')
-            {
-                modifyView();
-            }
-
-        }
-    </script>
+        <div id="app"></div>
     </body>
-</html>
+    </html>
